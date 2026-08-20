@@ -1,0 +1,67 @@
+nav {
+    background-color: #b71c1c;
+    padding: 0 20px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav > ul {
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    display: block;
+    padding: 18px 22px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover do menu principal */
+nav > ul > li:hover > a {
+    background-color: #e65100;
+}
+
+/* Submenu */
+nav li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background-color: #e65100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+}
+
+/* Exibe o submenu ao passar o mouse */
+nav li:hover > ul {
+    display: block;
+}
+
+/* Links do submenu */
+nav li ul li {
+    width: 100%;
+}
+
+nav li ul li a {
+    padding: 14px 18px;
+    font-weight: normal;
+}
+
+/* Hover dos itens do submenu */
+nav li ul li:hover > a {
+    background-color: #b71c1c;
+}
