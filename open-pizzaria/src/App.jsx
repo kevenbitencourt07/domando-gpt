@@ -1,5 +1,5 @@
 import Header from "./Components/Header";
-import Banner from "./Components/Banner"
+import Banner from "./Components/Banner";
 import Cards from "./Components/Cards";
 import Footer from "./Components/Footer";
 import Menu from "./Components/Menu";
@@ -14,16 +14,6 @@ function App() {
       />
 
       <Menu />
-
-      <Header titleHeader="Doris" texteHeader="Doris outro"
-      />
-
-      <Header titleHeader="Outro gato" 
-      texteHeader="Oiii mundo"
-      />
-
-      <Header titleHeader="Keven" 
-      texteHeader="Vai Corinthians!"/>
 
       <Banner /> 
 
