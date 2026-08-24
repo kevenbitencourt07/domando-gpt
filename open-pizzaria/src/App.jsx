@@ -1,9 +1,7 @@
 import Header from "./Components/Header";
-import Banner from "./Components/Banner";
-import Cards from "./Components/Cards";
-import FeedBack from "./Components/FeedBack"
 import Footer from "./Components/Footer";
 import Menu from "./Components/Menu";
+import Router from "./Router";
 import "./Global.css"
 
 function App() {
@@ -16,12 +14,8 @@ function App() {
 
       <Menu />
 
-      <Banner /> 
-
-      <Cards />
-
-      <FeedBack />
-
+      <Router />
+   
       <Footer titleFooter="OpenPizzaria! - Todos os direitos reservados - 2026"/>
 
      
