@@ -12,8 +12,6 @@ function App() {
       texteHeader="As melhores pizzas, feitas com carinho e muito sabor para você!"
       />
 
-      <Menu />
-
       <Router />
    
       <Footer titleFooter="OpenPizzaria! - Todos os direitos reservados - 2026"/>
