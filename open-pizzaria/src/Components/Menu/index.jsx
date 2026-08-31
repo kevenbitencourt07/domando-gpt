@@ -1,31 +1,44 @@
-import { Link } from "react-router-dom"
-import "./Menu.css"
+import { Link } from "react-router-dom";
+import "./Menu.css";
 
 const Menu = () => {
-
     return (
+        
+         <nav>
+            <ul>
+                <li>
+                    <Link to="/">Home</Link>
+                </li>
+                <li>
+                    <Link to="/sobre">Sobre</Link>
+                </li>
+                <li>
+                    <Link to="/cadastro">Cadastro</Link>
+                </li>
+                 <li>
+                    <Link to="/users">Usuários</Link>
+                </li>
+                <li>
+                    <Link to="/cardapio">Cardápio</Link>
+                </li>
+                <li>
+                    <Link to="/comentario">Comentários</Link>
+                </li>
 
-        <nav>
-           <ul>
-            <li><a href="/">Home</a></li>
-            <li><Link to="/sobre">Sobre</Link></li>
-            <li><Link to="/cardapio">Cardápio</Link></li>
-            <li>
-                <a href="#">Mais</a>
+                <li>
+                    <a href="#">Mais ▾</a>
+
                     <ul>
                         <li>
                             <a href="#">Fale Conosco</a>
                         </li>
-                    </ul>
-                    <ul>
                         <li>
-                            <a href="#">Faq</a>
+                            <a href="#">FAQ</a>
                         </li>
-                    </ul>    
-            </li>  
-           </ul>
+                    </ul>
+                </li>
+            </ul>
         </nav>
-
     )
 }
 

@@ -1,39 +1,38 @@
-.sobre-pizzaria {
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-    margin: 40px auto;
-    max-width: 1000px;
-    padding: 0 20px;
-    
-    cursor: pointer;
+.pizzaria-section {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-.sobre-pizzaria article {
-    flex: 1;
-    background: #fff;
-    padding: 30px;
-    border-radius: 18px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-    border-top: 5px solid #d32f2f;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.pizzaria-section article {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid #f4511e;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.sobre-pizzaria article:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+.pizzaria-section article:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
-.sobre-pizzaria h1 {
-    margin-top: 0;
-    margin-bottom: 15px;
-    color: #d32f2f;
-    font-size: 24px;
+.pizzaria-section h1 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #d32f2f;
+  font-size: 26px;
 }
 
-.sobre-pizzaria p {
-    margin: 0;
-    color: #555;
-    font-size: 16px;
-    line-height: 1.7;
+.pizzaria-section p {
+  margin: 0;
+  color: #5d4037;
+  font-size: 17px;
+  line-height: 1.6;
 }

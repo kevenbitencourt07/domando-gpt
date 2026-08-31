@@ -1,7 +1,6 @@
 nav {
-    background-color: #b71c1c;
+    background-color: #d32f2f;
     padding: 0 20px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
 nav ul {
@@ -21,47 +20,46 @@ nav li {
 
 nav a {
     display: block;
-    padding: 18px 22px;
-    color: #fff;
+    padding: 18px 20px;
+    color: white;
     text-decoration: none;
-    font-size: 16px;
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
-/* Hover do menu principal */
-nav > ul > li:hover > a {
-    background-color: #e65100;
+/* Efeito ao passar o mouse */
+nav a:hover {
+    background-color: #f4511e;
 }
 
 /* Submenu */
-nav li ul {
+nav li > ul {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     min-width: 180px;
-    background-color: #e65100;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-    z-index: 1000;
+    background-color: #d32f2f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
 }
 
-/* Exibe o submenu ao passar o mouse */
+/* Mostra o submenu */
 nav li:hover > ul {
     display: block;
 }
 
-/* Links do submenu */
-nav li ul li {
+/* Itens do submenu */
+nav li > ul li {
     width: 100%;
 }
 
-nav li ul li a {
+nav li > ul a {
     padding: 14px 18px;
-    font-weight: normal;
+    white-space: nowrap;
 }
 
-/* Hover dos itens do submenu */
-nav li ul li:hover > a {
-    background-color: #b71c1c;
+/* Hover do submenu */
+nav li > ul a:hover {
+    background-color: #f4511e;
 }

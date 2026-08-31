@@ -1,32 +1,29 @@
-    .header-pizzaria {
-        background: linear-gradient(135deg, #b71c1c, #e65100);
-        color: #fff;
-        text-align: center;
-        padding: 45px 20px;
-        border-radius: 15px;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-        margin-bottom: 25px;
-    }
+.header-pizzaria {
+    background: linear-gradient(135deg, #d32f2f, #f4511e);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
 
-    .header-pizzaria h1 {
-        margin: 0 0 12px;
-        font-size: 38px;
-        font-family: Arial, sans-serif;
-        font-weight: bold;
-        color: #fff;
-    }
+.header-pizzaria h1 {
+    margin: 0 0 15px;
+    font-size: 36px;
+    font-weight: bold;
+}
 
-    .header-pizzaria p {
-        margin: 0;
-        font-size: 19px;
-        font-family: Arial, sans-serif;
-        color: #fff3e0;
-    }
+.header-pizzaria p {
+    margin: 0 auto;
+    max-width: 700px;
+    font-size: 18px;
+    line-height: 1.6;
+}
 
-    .divider {
-        border: none;
-        height: 3px;
-        background: linear-gradient(to right, #b71c1c, #ff9800, #b71c1c);
-        margin: 25px 0;
-        border-radius: 5px;
-    }
+.divider {
+    border: none;
+    height: 4px;
+    margin: 20px 0;
+    background: #ff9800;
+    border-radius: 5px;
+}

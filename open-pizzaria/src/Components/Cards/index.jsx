@@ -1,27 +1,30 @@
 import "./Cards.css"
+
 const Cards = () => {
     return (
-      <section className="sobre-pizzaria">
-        <article>
-          <h1>🍕 Nossas Pizzas</h1>
-          <p>
-            Na OpenPizzaria, preparamos pizzas deliciosas com ingredientes
-            selecionados, massa fresquinha e muito sabor. Temos opções para
-            todos os gostos, desde os sabores clássicos até combinações especiais.
-          </p>
-        </article>
 
-        <article>
-          <h1>❤️ Feito com Sabor</h1>
-          <p>
-            Nosso objetivo é proporcionar uma experiência incrível em cada pedido.
-            Preparamos tudo com carinho para que você possa aproveitar uma pizza
-            quentinha, saborosa e perfeita para compartilhar com quem você ama.
-          </p>
-        </article>
+    <>
+        <section className="pizzaria-section">
+            <article>
+                <h1>🍕 Nossas Pizzas</h1>
+                <p>
+                    Na OpenPizzaria, você encontra pizzas deliciosas preparadas com ingredientes
+                    frescos e muito carinho. Escolha seu sabor favorito e aproveite cada pedaço!
+                </p>
+            </article>
+
+            <article>
+                <h1>🔥 Sabor que conquista</h1>
+                <p>
+                    Massa crocante, queijo derretido e combinações irresistíveis. Nossa missão
+                    é levar até você uma pizza quentinha e cheia de sabor para tornar qualquer
+                    momento ainda mais especial.
+                </p>
+            </article>
       </section>
+    </>
+
     )
 }
 
 export default Cards;
-

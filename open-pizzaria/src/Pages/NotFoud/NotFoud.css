@@ -1,0 +1,390 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.not-found {
+  position: relative;
+
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 20px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(211, 47, 47, 0.08),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(244, 81, 30, 0.08),
+      transparent 35%
+    ),
+    #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.not-found-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 700px;
+
+  text-align: center;
+
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* =========================
+   404
+========================= */
+
+.error-wrapper {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 230px;
+
+  user-select: none;
+}
+
+.error-number,
+.error-shadow {
+  position: absolute;
+
+  font-size: clamp(130px, 25vw, 220px);
+  font-weight: 900;
+
+  line-height: 1;
+  letter-spacing: -12px;
+}
+
+.error-number {
+  z-index: 2;
+
+  background: linear-gradient(
+    135deg,
+    #d32f2f 0%,
+    #f4511e 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  filter: drop-shadow(
+    0 12px 20px rgba(211, 47, 47, 0.18)
+  );
+
+  animation: float 4s ease-in-out infinite;
+}
+
+.error-shadow {
+  z-index: 1;
+
+  color: transparent;
+
+  -webkit-text-stroke: 2px
+    rgba(244, 81, 30, 0.12);
+
+  transform: translate(12px, 12px);
+}
+
+/* =========================
+   LINHA
+========================= */
+
+.divider {
+  width: 70px;
+  height: 4px;
+
+  margin: 15px auto 25px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    90deg,
+    #d32f2f,
+    #f4511e
+  );
+}
+
+/* =========================
+   TÍTULO
+========================= */
+
+.not-found h1 {
+  color: #1f1f1f;
+
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 800;
+
+  margin-bottom: 18px;
+
+  letter-spacing: -1px;
+}
+
+/* =========================
+   DESCRIÇÃO
+========================= */
+
+.not-found p {
+  max-width: 500px;
+
+  margin: 0 auto 35px;
+
+  color: #666;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* =========================
+   BOTÃO
+========================= */
+
+.home-button {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  min-width: 210px;
+
+  padding: 15px 25px;
+
+  border-radius: 50px;
+
+  background: linear-gradient(
+    135deg,
+    #d32f2f,
+    #f4511e
+  );
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 10px 25px rgba(211, 47, 47, 0.22),
+    0 4px 10px rgba(244, 81, 30, 0.12);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.home-button::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -100%;
+
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+
+  transition: left 0.5s ease;
+}
+
+.home-button span {
+  position: relative;
+  z-index: 2;
+}
+
+.home-button:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 15px 30px rgba(211, 47, 47, 0.28),
+    0 7px 15px rgba(244, 81, 30, 0.18);
+}
+
+.home-button:hover::before {
+  left: 100%;
+}
+
+.arrow {
+  font-size: 20px;
+
+  transition: transform 0.3s ease;
+}
+
+.home-button:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* =========================
+   FORMAS DO FUNDO
+========================= */
+
+.background-shape {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(1px);
+}
+
+.shape-1 {
+  width: 280px;
+  height: 280px;
+
+  top: -120px;
+  left: -100px;
+
+  border: 45px solid rgba(211, 47, 47, 0.06);
+
+  animation: rotateShape 15s linear infinite;
+}
+
+.shape-2 {
+  width: 350px;
+  height: 350px;
+
+  right: -180px;
+  bottom: -180px;
+
+  border: 55px solid rgba(244, 81, 30, 0.06);
+
+  animation: rotateShape 20s linear infinite reverse;
+}
+
+.shape-3 {
+  width: 90px;
+  height: 90px;
+
+  right: 15%;
+  top: 15%;
+
+  background: rgba(211, 47, 47, 0.05);
+
+  box-shadow:
+    0 0 0 20px rgba(211, 47, 47, 0.02);
+
+  animation: pulse 3s ease-in-out infinite;
+}
+
+/* =========================
+   ANIMAÇÕES
+========================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes rotateShape {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 600px) {
+  .not-found {
+    padding: 30px 20px;
+  }
+
+  .error-wrapper {
+    height: 170px;
+  }
+
+  .error-number,
+  .error-shadow {
+    font-size: 140px;
+    letter-spacing: -8px;
+  }
+
+  .not-found h1 {
+    font-size: 28px;
+  }
+
+  .not-found p {
+    font-size: 15px;
+  }
+
+  .shape-1 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .shape-2 {
+    width: 250px;
+    height: 250px;
+  }
+}

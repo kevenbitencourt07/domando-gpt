@@ -1,15 +1,16 @@
-import "./Header.css"
+import "./header.css"
 
 const Header = (props) => {
-    console.log(props);
-
+    console.log(props)
     return (
         <>
             <header className="header-pizzaria">
                 <h1>{props.titleHeader}</h1>
-                <p>{props.texteHeader}</p>
+                <p>{props.textHeader}</p>
             </header>
+            
             <hr className="divider" />
+
         </>
     )
 }

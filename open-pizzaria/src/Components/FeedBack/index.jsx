@@ -1,5 +1,5 @@
-import "./FeedBack.css"
 import estrela from "../../assets/estrela.png"
+import "./Feedback.css"
 
 const feedbacks = [
     {
@@ -44,38 +44,44 @@ const feedbacks = [
     }
 ];
 
-const FeedBack = () => {
+const Feedback = () => {
 
     console.log(feedbacks)
 
     return (
         <section className="feedBack">
-            {feedbacks.map((feedback) => 
+            {feedbacks.map((feedback) =>
                 <article className="contentBack" key={feedback.id}>
+
                     <img 
-                        src={feedback.imagem}
-                        width={80}
-                        height={80}
-                        alt={`Foto de ${feedback.nome}`} 
-                    />
+                    src={feedback.imagem}
+                    width={80}
+                    height={80}
+                    alt={`Foto de ${feedback.nome}`} />
 
                     <h1>{feedback.nome}</h1>
 
-                    <img 
-                        src={estrela} 
-                        width="30" 
-                        height="30" 
-                        alt="" 
-                    />
+                    <img
+                    src={estrela}
+                    width='30'
+                    height='30'
+                    alt="" />
 
-                    <strong>{feedback.nota.toFixed(1)}</strong>
+                    <strong>
+                        {feedback.nota.toFixed(1)}
+                    </strong>
 
-                    <p>{feedback.comentario}</p>
+                    <p>
+                        {feedback.comentario}
+                    </p>
+
                 </article>
+            
             )}
 
         </section>
+        
     )
 }
 
-export default FeedBack;
+export default Feedback
