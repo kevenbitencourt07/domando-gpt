@@ -21,7 +21,36 @@ export default function index() {
     //Função para enviar o formulário
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log("Enviar.....")
+
+        // Validação caso o usuário não digite nada
+        if (
+            formData.nome.trim() === "" ||
+            formData.email.trim() === "" ||
+            formData.telefone.trim() === ""
+        ) {
+        alert("Preencha todos os campos!");
+        return;
+        }
+    
+
+        // Enviando os dados para o backend com JSON
+        fetch("http://localhost:3000/users", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formData)
+         })
+         .then((response) => response.json())
+         .then((data) => {
+            console.log("Usuário cadastrado com sucesso!", data);
+            // Limpa o formulário após o envio
+            setFormData({
+                nome: "",
+                email: "",
+                telefone: ""
+            })
+         })
     }
 
   return (
@@ -32,7 +61,7 @@ export default function index() {
                 <label htmlFor="nome">Nome</label>
                 <input 
                     type="text" 
-                    name='nome'
+                    name="nome"
                     placeholder='Digite seu Nome'
                     value={formData.nome} 
                     onChange={handleChange}
@@ -44,7 +73,7 @@ export default function index() {
                 <label htmlFor="email">Email</label>
                 <input 
                     type="email" 
-                    name='email'
+                    name="email"
                     placeholder='Digite seu Email'
                     value={formData.email} 
                     onChange={handleChange}
@@ -55,7 +84,7 @@ export default function index() {
                 <label htmlFor="telefone">Telefone</label>
                 <input 
                     type="tel" 
-                    name='telefone'
+                    name="telefone"
                     placeholder='Digite seu Telefone'
                     value={formData.telefone} 
                     onChange={handleChange}
