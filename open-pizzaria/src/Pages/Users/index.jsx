@@ -19,7 +19,17 @@ export default function index() {
         .catch((error) => console.error("Erro na API", error))
     }, [])
 
-    console.log(usuarios)
+
+    const deletarUsuario = (id) => {
+        fetch(`http://localhost:3000/users/${id}`, {
+            method: "DELETE",
+        })
+        .then(() => {
+            setUsuarios(usuarios.filter((usuarios) => usuarios.id !== id))
+        })
+        .catch((error) => console.log(error));
+    }
+
 
   return (
     <main className="containerUsers">
@@ -32,6 +42,10 @@ export default function index() {
                     <strong>Nome: {user.nome}</strong>
                     <strong>Email: {user.email}</strong>
                     <strong>Telefone: {user.telefone}</strong>
+                    <button 
+                        className="btn-delete"
+                        onClick={() => deletarUsuario(user.id)}
+                        >Deletar {user.nome}</button>
                 </article>
             ))}
            

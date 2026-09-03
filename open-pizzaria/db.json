@@ -26,34 +26,10 @@
   },
   "users": [
     {
-      "id": "1",
-      "nome": "João Silva",
-      "email": "joao@email.com",
-      "telefone": "11999990001"
-    },
-    {
-      "id": "2",
-      "nome": "Maria Santos",
-      "email": "maria@email.com",
-      "telefone": "11999990002"
-    },
-    {
-      "id": "3",
-      "nome": "Pedro Oliveira",
-      "email": "pedro@email.com",
-      "telefone": "11999990003"
-    },
-    {
       "id": "4",
       "nome": "Ana Souza",
       "email": "ana@email.com",
       "telefone": "11999990004"
-    },
-    {
-      "id": "5",
-      "nome": "Carlos Pereira",
-      "email": "carlos@email.com",
-      "telefone": "11999990005"
     },
     {
       "id": "6",
@@ -90,12 +66,6 @@
       "email": "igor@hotmail.com",
       "telefone": "1119787878",
       "id": "TJSNp94wl"
-    },
-    {
-      "nome": "Juliana",
-      "email": "juliana@gmail.com",
-      "telefone": "5656566565",
-      "id": "W_O1Sv8-P"
     },
     {
       "nome": "Dóris",
